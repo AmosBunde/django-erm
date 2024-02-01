@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <div>
+        {% for employee in employees %}
+        <div class="employee_name">
+            <h3>
+                <a href="">
+                    {{employee.name|capfirst}}
+                </a>
+            </h3>
+        </div>
+        {% endfor %}
+    </div>
+</html>
