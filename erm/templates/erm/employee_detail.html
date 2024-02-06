@@ -1,0 +1,15 @@
+<div> 
+    <h3> {{employee.first_name}}</h3>
+    <p>{{employee.email_id}}</p>
+    <p>{{employee.phone_number}}</p>
+    <p>{{employee.address}}</p>
+    <p>{{employee.gender}}</p>
+    <p>{{employee.dob}}</p>
+    <p>{{employee.joining_date}}</p>
+    <p>
+        {% if employee.jobs.all %}
+        {% for job in employee.jobs.all %}
+        {% endfor %}
+        {% endif %}
+    </p>
+</div>
