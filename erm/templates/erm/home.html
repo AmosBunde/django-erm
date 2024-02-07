@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-    <div>
-        {% for employee in employees %}
-        <div class="employee_name">
-            <h3>
-                <a href="{% url 'employee_detail' employee.id %}">
-                    {{employee.first_name|capfirst}}{{employee.last_name|capfirst}}
-                </a>
-            </h3>
-            <p> {{ employee.email_id}}</p>
-        </div>
-        {% endfor %}
+{% extends 'erm/base.html' %}
+{% block content %}
+{% for employee in employees %}
+<div class="col-md4">
+    <div class="card mb-3">
+        <div class="card-header">{{employee.first_name|capfirst}} {{employee.last_name|capfirst}}</div>
+        <div class="card-body"> <p> {{ employee.email_id}}</p></div>
     </div>
-</html>
+</div>
+{% endfor %}
+    
+{% endblock content %}
