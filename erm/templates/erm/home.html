@@ -2,10 +2,10 @@
 {% block content %}
 {% for employee in employees %}
 <div class="col-md4">
-    <div class="card mb-3">
+    <a class="card mb-3 text-decoration-none text-black" href="% url 'employee_detail' employee.id%">
         <div class="card-header">{{employee.first_name|capfirst}} {{employee.last_name|capfirst}}</div>
         <div class="card-body"> <p> {{ employee.email_id}}</p></div>
-    </div>
+    </a>
 </div>
 {% endfor %}
     
